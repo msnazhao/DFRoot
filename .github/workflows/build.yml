@@ -93,10 +93,11 @@ jobs:
           distribution: temurin
           java-version: 21
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v4
+
       - name: Install Android SDK 31
-        run: |
-          yes | sdkmanager --licenses >/dev/null
-          sdkmanager "platforms;android-31"
+        run: sdkmanager "platforms;android-31"
 
       - uses: gradle/actions/setup-gradle@v6
 
