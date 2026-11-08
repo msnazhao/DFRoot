@@ -87,6 +87,8 @@ The exploit uses this primitive to patch shellcode into `libc++.so` in the kerne
 make
 ```
 
+The app requires Android 12 (API 31) or newer. GitHub Actions builds a debug APK for branch pushes and pull requests. Pushing a `v*` tag builds a signed release and publishes it; configure the repository Actions secrets `KEYSTORE` (base64-encoded JKS), `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD` to sign releases.
+
 ## Credits
 
 - Original PoC and various code: https://github.com/lsposed/lspromise
